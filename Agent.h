@@ -4,23 +4,23 @@
 #include <string>
 using std::string;
 class Agent
-	{
+{
+	
+	
+	private :
+		string id;
+		int contact;
 		
-		
-		private :
-			string id;
-			int contact;
-			
 	public:
 		void setid(string x){this->id=x;}
 		void setcontact(int x){this->contact=x;}
 		int getcontact(){return this->contact;}
 		string getid(){return this->id;}
-			
-			
-			
-			
-			
-	};
-
+		void operator=(const Agent &a);
+};
+void Agent::operator=(const Agent &a)
+{
+	this->id=a.getid();
+	this->contact=a.getcontact();
+}
 #endif
