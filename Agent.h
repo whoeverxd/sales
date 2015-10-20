@@ -16,11 +16,11 @@ class Agent
 		void setcontact(int x){this->contact=x;}
 		int getcontact(){return this->contact;}
 		string getid(){return this->id;}
-		void operator=(const Agent &a);
+		void operator=(Agent &a);
 };
-void Agent::operator=(const Agent &a)
+void Agent::operator=(Agent &a)
 {
-	this->id=a.getid();
-	this->contact=a.getcontact();
+	setid(a.getid());
+	setcontact(a.getcontact());
 }
 #endif

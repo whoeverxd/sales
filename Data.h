@@ -8,7 +8,7 @@ class Data
 	private :
 		string AgentId,Contact,PropertySize,RoomType,Location,SellingPrice;
 	public :
-		Data(){;}
+		Data():AgentId(),Contact(), PropertySize(),RoomType(),Location(),SellingPrice(){}
 		Data(string AgentId, string Contact, string PropertySize, string RoomType, string Location, string SellingPrice);
 		void setAgentId(string x){this->AgentId=x;}
 		void setContact(string x){this->Contact=x;}
@@ -22,6 +22,8 @@ class Data
 		string getRoomType(){return this->RoomType;}
 		string getLocation(){return this->Location;}
 		string getSellingPrice(){return this->SellingPrice;}
+		bool operator>(Data a);
+		bool operator<(Data a);
 };
 Data::Data(string AgentId, string Contact, string PropertySize, string RoomType, string Location, string SellingPrice)
 {
@@ -32,5 +34,23 @@ Data::Data(string AgentId, string Contact, string PropertySize, string RoomType,
 	this->RoomType=RoomType;
 	this->Location=Location;
 	this->SellingPrice=SellingPrice;
+}
+bool Data::operator>(Data a)
+{
+	if(SellingPrice>a.getSellingPrice())
+	{
+		return(true);
+	}else{
+		return(false);
+	}
+}
+bool Data::operator<(Data a)
+{
+	if(SellingPrice<a.getSellingPrice())
+	{
+		return(true);
+	}else{
+		return(false);
+	}
 }
 #endif
