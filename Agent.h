@@ -2,6 +2,7 @@
 #define agent_h
 #include <iostream>
 #include <string>
+using namespace std;
 using std::string;
 class Agent
 {
