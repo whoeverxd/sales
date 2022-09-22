@@ -1,13 +1,13 @@
-# Makefile de Lista
+# Makefile harikesh
 
 # Variables
-CC = g++
+CC = gcc
 JOSH = -g
-EJECUTABLE = main
+EXECUTABLE = main
 
 # Programa Principal
 all: lista.h nodo.h
-	$(CC) $(JOSH) nodo.h lista.h main.cpp -o $(EJECUTABLE)
+	$(CC) $(JOSH) nodo.h lista.h main.cpp -o $(EXECUTABLE)
 
 # Librerías
 
@@ -20,4 +20,4 @@ nodo.h: nodo.h
 	
 # Borrar los Archivos Objeto y el Ejecutable
 clean:
-	rm -rf *.o $(EJECUTABLE) 
+	rm -rf *.o $(EXECUTABLE) 
